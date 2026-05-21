@@ -1,0 +1,803 @@
+{
+  "info": {
+    "_postman_id": "05325a14-f815-4cbe-8fcb-49f92586d1cf",
+    "name": "QA Manuel Project HW",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54049405",
+    "_collection_link": "https://go.postman.co/collection/54049405-05325a14-f815-4cbe-8fcb-49f92586d1cf?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Valid Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Duka\",\n  \"email\": \"duka@mail.com\",\n  \"password\": \"pwd1234567\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/user/register",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "user",
+                "register"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\n  'https://task-pro-qa.b.goit.study/user/register' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"Duka\",\n  \"email\": \"duka@mail.com\",\n  \"password\": \"pwd1234567\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Invalid Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Duka\",\n  \"email\": \"duka@mail.com\",\n  \"password\": \"pwd1234567\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/user/register",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "user",
+                "register"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\n  'https://task-pro-qa.b.goit.study/user/register' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"Duka\",\n  \"email\": \"duka@mail.com\",\n  \"password\": \"pwd1234567\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"duka@mail.com\",\n  \"password\": \"pwd1234567\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/user/login",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "user",
+                "login"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\n  'https://task-pro-qa.b.goit.study/user/login' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"email\": \"duka@mail.com\",\n  \"password\": \"pwd1234567\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Refresh",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/user/refresh",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "user",
+                "refresh"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\n  'https://task-pro-qa.b.goit.study/user/refresh' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Google User",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Google Callback",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/user/google/callback",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "user",
+                "google",
+                "callback"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\n  'https://task-pro-qa.b.goit.study/user/google/callback' \\\n  -H 'accept: */*'"
+          },
+          "response": []
+        },
+        {
+          "name": "User me",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg"
+              }
+            ],
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/user/me",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "user",
+                "me"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\n  'https://task-pro-qa.b.goit.study/user/me' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg'"
+          },
+          "response": []
+        },
+        {
+          "name": "Theme",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"theme\": \"violet\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/user/theme",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "user",
+                "theme"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'PATCH' \\\n  'https://task-pro-qa.b.goit.study/user/theme' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"theme\": \"violet\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"avatar\": \"string\",\n  \"name\": \"Duka\",\n  \"email\": \"duka@mail.com\",\n  \"password\": \"pwd1234567\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/user/update",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "user",
+                "update"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'PUT' \\\n  'https://task-pro-qa.b.goit.study/user/update' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"avatar\": \"string\",\n  \"name\": \"Duka\",\n  \"email\": \"duka@mail.com\",\n  \"password\": \"pwd1234567\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg"
+              }
+            ],
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/user/logout",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "user",
+                "logout"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\n  'https://task-pro-qa.b.goit.study/user/logout' \\\n  -H 'accept: */*' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg' \\\n  -d ''"
+          },
+          "response": []
+        },
+        {
+          "name": "https://accounts.google.com/o/oauth2/v2/auth?response_type=code&redirect_uri=https%3A%2F%2Ftask-pro-qa.b.goit.study%2Fuser%2Fgoogle%2Fcallback&scope=email%20profile&client_id=640664708634-monkdu631josuuveaoa3pfmulf0a1h68.apps.googleusercontent.com",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+              },
+              {
+                "key": "accept-language",
+                "value": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7"
+              },
+              {
+                "key": "priority",
+                "value": "u=0, i"
+              },
+              {
+                "key": "referer",
+                "value": "https://task-pro-qa.f.goit.study/"
+              },
+              {
+                "key": "sec-ch-ua",
+                "value": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\""
+              },
+              {
+                "key": "sec-ch-ua-arch",
+                "value": "\"x86\""
+              },
+              {
+                "key": "sec-ch-ua-bitness",
+                "value": "\"64\""
+              },
+              {
+                "key": "sec-ch-ua-form-factors",
+                "value": "\"Desktop\""
+              },
+              {
+                "key": "sec-ch-ua-full-version",
+                "value": "\"138.0.7204.184\""
+              },
+              {
+                "key": "sec-ch-ua-full-version-list",
+                "value": "\"Not)A;Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"138.0.7204.184\", \"Google Chrome\";v=\"138.0.7204.184\""
+              },
+              {
+                "key": "sec-ch-ua-mobile",
+                "value": "?0"
+              },
+              {
+                "key": "sec-ch-ua-model",
+                "value": "\"\""
+              },
+              {
+                "key": "sec-ch-ua-platform",
+                "value": "\"macOS\""
+              },
+              {
+                "key": "sec-ch-ua-platform-version",
+                "value": "\"11.7.11\""
+              },
+              {
+                "key": "sec-ch-ua-wow64",
+                "value": "?0"
+              },
+              {
+                "key": "sec-fetch-dest",
+                "value": "document"
+              },
+              {
+                "key": "sec-fetch-mode",
+                "value": "navigate"
+              },
+              {
+                "key": "sec-fetch-site",
+                "value": "cross-site"
+              },
+              {
+                "key": "sec-fetch-user",
+                "value": "?1"
+              },
+              {
+                "key": "upgrade-insecure-requests",
+                "value": "1"
+              },
+              {
+                "key": "user-agent",
+                "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+              },
+              {
+                "key": "x-chrome-id-consistency-request",
+                "value": "version=1,client_id=77185425430.apps.googleusercontent.com,device_id=064a805b-885f-45a9-a06f-a1ddcd1875b8,sync_account_id=113688770264117888093,signin_mode=all_accounts,signout_mode=show_confirmation"
+              },
+              {
+                "key": "Cookie",
+                "value": "__Secure-BUCKET=CJIH; ACCOUNT_CHOOSER=AFx_qI4yUoPVPpTKy3IPxE0C1REERSIe9SJFVB0NuWQDSoQ8jL0pX-_laDFcY_7c6tghUa0B9booZMQ7wE6nC4bQxOM9O36yos4eBn56TfTI6rD41G-e-9PPvVGlDMPB1J3_Zhe00m1F; OTZ=8556380_44_48_123900_44_436380; LSOLH=_SVI_ELenhsG035MDGAMiP01BRURIZl9xbFdkYTlBbzVQSjI2TE5kMll0YmZaSHpkYjNWaXFQRFRsM0tpd3ZvbGdtWXJxODVjazA5S0xjVQ_:29594865:9662; SID=g.a0009QhjGcxMhUJkEnxwxEQdJ9M9Li1geSzG0CzjbSJT6vZgnFwCj_rVbrQW1g8bsK3Wyq2soQACgYKAcESARESFQHGX2MiNcZBQFcZIybsO-wa6HoKSRoVAUF8yKrIYjRaR-qvMm66e7_B-SJK0076; __Secure-1PSID=g.a0009QhjGcxMhUJkEnxwxEQdJ9M9Li1geSzG0CzjbSJT6vZgnFwCGZYqkMX4JtwuAdNG928AAQACgYKAWMSARESFQHGX2MiQMEsMBlYmD-VjBhp6AqKdxoVAUF8yKquPizsS4pK42Ud8mjKZzZd0076; __Secure-3PSID=g.a0009QhjGcxMhUJkEnxwxEQdJ9M9Li1geSzG0CzjbSJT6vZgnFwCjrvBTnLk67dOTGzAYbjAOQACgYKAQcSARESFQHGX2Mi-L-dhosqvO59ZGWQXvTUYRoVAUF8yKpq2xoyKG2Rkg7_YhXxda1B0076; LSID=o.calendar.google.com|o.chromewebstore.google.com|o.drive.google.com|o.drive.usercontent.google.com|o.lens.google.com|o.mail.google.com|o.meet.google.com|o.notebooklm.google.com|o.play.google.com|s.TR|s.youtube:g.a0009QhjGXEsdAbKCvRjLVqLayNWBw_N3L93qafq1VPDvLuZnUCL11HUM0HZSs-cC3hR47K-QgACgYKASISARESFQHGX2Min_rziSv4DmTnHoM5X8pbKBoVAUF8yKp_vrG-5NQbnpysl0TyU40e0076; __Host-1PLSID=o.calendar.google.com|o.chromewebstore.google.com|o.drive.google.com|o.drive.usercontent.google.com|o.lens.google.com|o.mail.google.com|o.meet.google.com|o.notebooklm.google.com|o.play.google.com|s.TR|s.youtube:g.a0009QhjGXEsdAbKCvRjLVqLayNWBw_N3L93qafq1VPDvLuZnUCLjlsDiK1JuNg2O8DBCJt-_QACgYKARISARESFQHGX2MiC9Hj8usVBPaOU8O0Pm8OaBoVAUF8yKpyhu0XSSGphKjz6S8n4VE50076; __Host-3PLSID=o.calendar.google.com|o.chromewebstore.google.com|o.drive.google.com|o.drive.usercontent.google.com|o.lens.google.com|o.mail.google.com|o.meet.google.com|o.notebooklm.google.com|o.play.google.com|s.TR|s.youtube:g.a0009QhjGXEsdAbKCvRjLVqLayNWBw_N3L93qafq1VPDvLuZnUCLJx7fKxHuQdoaNcRT0KySsQACgYKAdASARESFQHGX2MigbPseAGVuIgKkJodkwD7qhoVAUF8yKpW7liwyVbgQLljFn2r3CJt0076; HSID=AV5P6zg56-PHEjYiZ; SSID=AktLWuQY6AJr5XInO; APISID=qflFEsy2uIeg-xdo/AXbWIfZALVukZi1Xb; SAPISID=dH4o_19UsFCQTuFx/AkdqbD2o6LMObGn5s; __Secure-1PAPISID=dH4o_19UsFCQTuFx/AkdqbD2o6LMObGn5s; __Secure-3PAPISID=dH4o_19UsFCQTuFx/AkdqbD2o6LMObGn5s; __Host-GAPS=1:QB988qXfHB1DoSBLdx6ckiOnff_iCE_XcOMOyQ8b1ELkMtycgBjyavHCPlaeSnI-YpaSOhCHfwlJkIfGpsuAh8UMIOT6Dw:MSenIe3V4B3VsR2E; AEC=AaJma5vz6-vdlx9KxrppT2AmMR3Cmaj3S4iNAySRdAigTFWDS5DvfeFi7Cg; __Secure-1PSIDTS=sidts-CjEBhkeRd4kJpXbg2E3XLh-6OTO4S1TneoaK9xpWb6VqqrQ0oHPwsIkriSvz1bRSqdlAEAA; __Secure-3PSIDTS=sidts-CjEBhkeRd4kJpXbg2E3XLh-6OTO4S1TneoaK9xpWb6VqqrQ0oHPwsIkriSvz1bRSqdlAEAA; NID=531=j5tNEzpEHxjUm6FmHEkr35tdessbhyua38DeMOdeNS7T0y1w7H5unB4YHjyLVPlmdB_GUzv9LGPpaFLD41px1REl9GLFKydlh3Yp5KjF4rXgPNZK87D6SL7YO04Tl3tlg8f01HP8jigEzUWas6Gs5ggrE_d9hmT6QEaquWA3BDLyeDuKSD5PoI560NaGANmrDTCwmRTVml50FAavRTXLl_alWpczLBG4bfcfpLxa84tnin1NefmpQ47CnXlsjnn6GJ6gDfnBQRAp1LCFFJu_Fz77t8GiKDTHFVXc9bYgFDR2UesuZ0nFkV9QSK3-gWzs5UkhzTsvQuNSFm9Ucl_SU5mMJdpSIezAOgTo1Fq38aE; SIDCC=AKEyXzU0KYyMYOIBg30f73ucJ6p91WlwPl164Omd_4yI45pyteZZL8zi74UIwRzD1KzNd8oQ4g; __Secure-1PSIDCC=AKEyXzVBOYGU2DADrvSJ6yx5NFJa75WLJufNLyZUdxdnlzNJg_K1mcwalVkwHqmWWQG1MX-XTA; __Secure-3PSIDCC=AKEyXzWe9YzHofphIJTjSxBURPJmwo2ZljStlGAoH_CCHQM0L6rL8-YSf3O68Rn-y-7VquibOQ"
+              }
+            ],
+            "url": {
+              "raw": "https://accounts.google.com/o/oauth2/v2/auth?response_type=code&redirect_uri=https%3A%2F%2Ftask-pro-qa.b.goit.study%2Fuser%2Fgoogle%2Fcallback&scope=email%20profile&client_id=640664708634-monkdu631josuuveaoa3pfmulf0a1h68.apps.googleusercontent.com",
+              "protocol": "https",
+              "host": [
+                "accounts",
+                "google",
+                "com"
+              ],
+              "path": [
+                "o",
+                "oauth2",
+                "v2",
+                "auth"
+              ],
+              "query": [
+                {
+                  "key": "response_type",
+                  "value": "code"
+                },
+                {
+                  "key": "redirect_uri",
+                  "value": "https%3A%2F%2Ftask-pro-qa.b.goit.study%2Fuser%2Fgoogle%2Fcallback"
+                },
+                {
+                  "key": "scope",
+                  "value": "email%20profile"
+                },
+                {
+                  "key": "client_id",
+                  "value": "640664708634-monkdu631josuuveaoa3pfmulf0a1h68.apps.googleusercontent.com"
+                }
+              ]
+            },
+            "description": "Generated from cURL: curl 'https://accounts.google.com/o/oauth2/v2/auth?response_type=code&redirect_uri=https%3A%2F%2Ftask-pro-qa.b.goit.study%2Fuser%2Fgoogle%2Fcallback&scope=email%20profile&client_id=640664708634-monkdu631josuuveaoa3pfmulf0a1h68.apps.googleusercontent.com' \\\n  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \\\n  -H 'accept-language: tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7' \\\n  -b '__Secure-BUCKET=CJIH; ACCOUNT_CHOOSER=AFx_qI4yUoPVPpTKy3IPxE0C1REERSIe9SJFVB0NuWQDSoQ8jL0pX-_laDFcY_7c6tghUa0B9booZMQ7wE6nC4bQxOM9O36yos4eBn56TfTI6rD41G-e-9PPvVGlDMPB1J3_Zhe00m1F; OTZ=8556380_44_48_123900_44_436380; LSOLH=_SVI_ELenhsG035MDGAMiP01BRURIZl9xbFdkYTlBbzVQSjI2TE5kMll0YmZaSHpkYjNWaXFQRFRsM0tpd3ZvbGdtWXJxODVjazA5S0xjVQ_:29594865:9662; SID=g.a0009QhjGcxMhUJkEnxwxEQdJ9M9Li1geSzG0CzjbSJT6vZgnFwCj_rVbrQW1g8bsK3Wyq2soQACgYKAcESARESFQHGX2MiNcZBQFcZIybsO-wa6HoKSRoVAUF8yKrIYjRaR-qvMm66e7_B-SJK0076; __Secure-1PSID=g.a0009QhjGcxMhUJkEnxwxEQdJ9M9Li1geSzG0CzjbSJT6vZgnFwCGZYqkMX4JtwuAdNG928AAQACgYKAWMSARESFQHGX2MiQMEsMBlYmD-VjBhp6AqKdxoVAUF8yKquPizsS4pK42Ud8mjKZzZd0076; __Secure-3PSID=g.a0009QhjGcxMhUJkEnxwxEQdJ9M9Li1geSzG0CzjbSJT6vZgnFwCjrvBTnLk67dOTGzAYbjAOQACgYKAQcSARESFQHGX2Mi-L-dhosqvO59ZGWQXvTUYRoVAUF8yKpq2xoyKG2Rkg7_YhXxda1B0076; LSID=o.calendar.google.com|o.chromewebstore.google.com|o.drive.google.com|o.drive.usercontent.google.com|o.lens.google.com|o.mail.google.com|o.meet.google.com|o.notebooklm.google.com|o.play.google.com|s.TR|s.youtube:g.a0009QhjGXEsdAbKCvRjLVqLayNWBw_N3L93qafq1VPDvLuZnUCL11HUM0HZSs-cC3hR47K-QgACgYKASISARESFQHGX2Min_rziSv4DmTnHoM5X8pbKBoVAUF8yKp_vrG-5NQbnpysl0TyU40e0076; __Host-1PLSID=o.calendar.google.com|o.chromewebstore.google.com|o.drive.google.com|o.drive.usercontent.google.com|o.lens.google.com|o.mail.google.com|o.meet.google.com|o.notebooklm.google.com|o.play.google.com|s.TR|s.youtube:g.a0009QhjGXEsdAbKCvRjLVqLayNWBw_N3L93qafq1VPDvLuZnUCLjlsDiK1JuNg2O8DBCJt-_QACgYKARISARESFQHGX2MiC9Hj8usVBPaOU8O0Pm8OaBoVAUF8yKpyhu0XSSGphKjz6S8n4VE50076; __Host-3PLSID=o.calendar.google.com|o.chromewebstore.google.com|o.drive.google.com|o.drive.usercontent.google.com|o.lens.google.com|o.mail.google.com|o.meet.google.com|o.notebooklm.google.com|o.play.google.com|s.TR|s.youtube:g.a0009QhjGXEsdAbKCvRjLVqLayNWBw_N3L93qafq1VPDvLuZnUCLJx7fKxHuQdoaNcRT0KySsQACgYKAdASARESFQHGX2MigbPseAGVuIgKkJodkwD7qhoVAUF8yKpW7liwyVbgQLljFn2r3CJt0076; HSID=AV5P6zg56-PHEjYiZ; SSID=AktLWuQY6AJr5XInO; APISID=qflFEsy2uIeg-xdo/AXbWIfZALVukZi1Xb; SAPISID=dH4o_19UsFCQTuFx/AkdqbD2o6LMObGn5s; __Secure-1PAPISID=dH4o_19UsFCQTuFx/AkdqbD2o6LMObGn5s; __Secure-3PAPISID=dH4o_19UsFCQTuFx/AkdqbD2o6LMObGn5s; __Host-GAPS=1:QB988qXfHB1DoSBLdx6ckiOnff_iCE_XcOMOyQ8b1ELkMtycgBjyavHCPlaeSnI-YpaSOhCHfwlJkIfGpsuAh8UMIOT6Dw:MSenIe3V4B3VsR2E; AEC=AaJma5vz6-vdlx9KxrppT2AmMR3Cmaj3S4iNAySRdAigTFWDS5DvfeFi7Cg; __Secure-1PSIDTS=sidts-CjEBhkeRd4kJpXbg2E3XLh-6OTO4S1TneoaK9xpWb6VqqrQ0oHPwsIkriSvz1bRSqdlAEAA; __Secure-3PSIDTS=sidts-CjEBhkeRd4kJpXbg2E3XLh-6OTO4S1TneoaK9xpWb6VqqrQ0oHPwsIkriSvz1bRSqdlAEAA; NID=531=j5tNEzpEHxjUm6FmHEkr35tdessbhyua38DeMOdeNS7T0y1w7H5unB4YHjyLVPlmdB_GUzv9LGPpaFLD41px1REl9GLFKydlh3Yp5KjF4rXgPNZK87D6SL7YO04Tl3tlg8f01HP8jigEzUWas6Gs5ggrE_d9hmT6QEaquWA3BDLyeDuKSD5PoI560NaGANmrDTCwmRTVml50FAavRTXLl_alWpczLBG4bfcfpLxa84tnin1NefmpQ47CnXlsjnn6GJ6gDfnBQRAp1LCFFJu_Fz77t8GiKDTHFVXc9bYgFDR2UesuZ0nFkV9QSK3-gWzs5UkhzTsvQuNSFm9Ucl_SU5mMJdpSIezAOgTo1Fq38aE; SIDCC=AKEyXzU0KYyMYOIBg30f73ucJ6p91WlwPl164Omd_4yI45pyteZZL8zi74UIwRzD1KzNd8oQ4g; __Secure-1PSIDCC=AKEyXzVBOYGU2DADrvSJ6yx5NFJa75WLJufNLyZUdxdnlzNJg_K1mcwalVkwHqmWWQG1MX-XTA; __Secure-3PSIDCC=AKEyXzWe9YzHofphIJTjSxBURPJmwo2ZljStlGAoH_CCHQM0L6rL8-YSf3O68Rn-y-7VquibOQ' \\\n  -H 'priority: u=0, i' \\\n  -H 'referer: https://task-pro-qa.f.goit.study/' \\\n  -H 'sec-ch-ua: \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"' \\\n  -H 'sec-ch-ua-arch: \"x86\"' \\\n  -H 'sec-ch-ua-bitness: \"64\"' \\\n  -H 'sec-ch-ua-form-factors: \"Desktop\"' \\\n  -H 'sec-ch-ua-full-version: \"138.0.7204.184\"' \\\n  -H 'sec-ch-ua-full-version-list: \"Not)A;Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"138.0.7204.184\", \"Google Chrome\";v=\"138.0.7204.184\"' \\\n  -H 'sec-ch-ua-mobile: ?0' \\\n  -H 'sec-ch-ua-model: \"\"' \\\n  -H 'sec-ch-ua-platform: \"macOS\"' \\\n  -H 'sec-ch-ua-platform-version: \"11.7.11\"' \\\n  -H 'sec-ch-ua-wow64: ?0' \\\n  -H 'sec-fetch-dest: document' \\\n  -H 'sec-fetch-mode: navigate' \\\n  -H 'sec-fetch-site: cross-site' \\\n  -H 'sec-fetch-user: ?1' \\\n  -H 'upgrade-insecure-requests: 1' \\\n  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36' \\\n  -H 'x-chrome-id-consistency-request: version=1,client_id=77185425430.apps.googleusercontent.com,device_id=064a805b-885f-45a9-a06f-a1ddcd1875b8,sync_account_id=113688770264117888093,signin_mode=all_accounts,signout_mode=show_confirmation'"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Boards",
+      "item": [
+        {
+          "name": "Get Boards",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg"
+              }
+            ],
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/boards",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "boards"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\n  'https://task-pro-qa.b.goit.study/boards' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg'"
+          },
+          "response": []
+        },
+        {
+          "name": "Add New Board",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"My project\",\n  \"icon\": \"star\",\n  \"background\": \"https://some-cloud-name.com/path/to/image/bg.jpg\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/boards",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "boards"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\n  'https://task-pro-qa.b.goit.study/boards' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"title\": \"My project\",\n  \"icon\": \"star\",\n  \"background\": \"https://some-cloud-name.com/path/to/image/bg.jpg\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Boards",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"My project\",\n  \"icon\": \"star\",\n  \"background\": \"https://some-cloud-name.com/path/to/image/bg.jpg\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/boards/649885bb8cfd32ed13fd42d3",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "boards",
+                "649885bb8cfd32ed13fd42d3"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'PUT' \\\n  'https://task-pro-qa.b.goit.study/boards/649885bb8cfd32ed13fd42d3' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"title\": \"My project\",\n  \"icon\": \"star\",\n  \"background\": \"https://some-cloud-name.com/path/to/image/bg.jpg\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Board Background",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"My project\",\n  \"icon\": \"star\",\n  \"background\": \"https://some-cloud-name.com/path/to/image/bg.jpg\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/boards/649885bb8cfd32ed13fd42d3",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "boards",
+                "649885bb8cfd32ed13fd42d3"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'PUT' \\\n  'https://task-pro-qa.b.goit.study/boards/649885bb8cfd32ed13fd42d3' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"title\": \"My project\",\n  \"icon\": \"star\",\n  \"background\": \"https://some-cloud-name.com/path/to/image/bg.jpg\"\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Board",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg"
+              }
+            ],
+            "url": {
+              "raw": "https://task-pro-qa.b.goit.study/boards/649885bb8cfd32ed13fd42d3",
+              "protocol": "https",
+              "host": [
+                "task-pro-qa",
+                "b",
+                "goit",
+                "study"
+              ],
+              "path": [
+                "boards",
+                "649885bb8cfd32ed13fd42d3"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'DELETE' \\\n  'https://task-pro-qa.b.goit.study/boards/649885bb8cfd32ed13fd42d3' \\\n  -H 'accept: application/json' \\\n  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OTQyYjI4MzEyY2YzYWJlYTExNjMzNCIsImlhdCI6MTY4NzQzMjM1MSwiZXhwIjoxNjg3NTE4NzUxfQ.DCEB2Q0lghWYieYxiZohu4uMMpwMYFa55XOqMgggVVg'"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "item": [
+        {
+          "name": "Add New Columns",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Update Column Title",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Column",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Reorder Column",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Add Another Column",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "Add Task",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Update Task",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Move Task the Another Column",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Task",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Support",
+      "item": [
+        {
+          "name": "Sending Email to Support",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
